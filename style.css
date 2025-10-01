@@ -1,9 +1,9 @@
      @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');       
-       /* --- 1. Global Setup and Variables --- */
+
         :root {
-            /* Colors based on the image provided (approximate) */
-            --color-primary-red: #E0354C; /* Main Red/Pink highlight */
-            --color-secondary-pink: #FEECEF; /* Hero section background */
+ 
+            --color-primary-red: #E0354C; 
+            --color-secondary-pink: #FEECEF; 
             --color-text-dark: #262626;
             --color-text-medium: #555555;
             --color-white: #ffffff;
@@ -11,7 +11,6 @@
             
         }
 
-        /* Reset and Box Sizing */
         * {
             margin: 0;
             padding: 0;
@@ -29,23 +28,21 @@
             width: 90%;
             max-width: var(--container-max-width);
             margin: 0 auto;
-            /* Ensures proper padding on mobile edges */
             padding-left: 15px; 
             padding-right: 15px; 
         }
 
-        /* --- 2. Navigation and Header Styling --- */
+        /* --- 1. Navbar --- */
 
-        /* Hamburger Menu Setup (The Checkbox Hack) */
         .menu-toggle {
-            display: none; /* Checkbox ko hamesha chhupayein */
+            display: none;
         }
         
         .hamburger-icon {
-            display: none; /* Pehle desktop par chhupayein */
+            display: none; 
             cursor: pointer;
             padding: 10px;
-            z-index: 101; /* Menu se upar rahe */
+            z-index: 101; 
             margin-left: 30px;
         }
 
@@ -118,7 +115,7 @@
         }
 
         .btn-quote:hover {
-            background-color: #c90022; /* Darker red on hover */
+            background-color: #c90022; 
         }
 
         @media (max-width: 600px) { 
@@ -130,16 +127,16 @@
         /* --- Responsiveness (Media Queries) --- */
 
 
-        /* Mobile View (768px and below) - Hero and Nav changes */
+        /* Mobile View (768px and below) - Navbar changes */
         @media (max-width: 768px) {
             
             /* Navigation Mobile Setup */
             .hamburger-icon {
-                display: block; /* Hamburger icon dikhega */
+                display: block; 
             }
             
             .main-nav {
-                display: none; /* Desktop menu chhup jayega */
+                display: none; 
                 position: absolute;
                 top: 100%;
                 left: 0;
@@ -155,7 +152,6 @@
                 align-items: flex-start;
             }
             
-            /* Checkbox Hack: Menu ko show karna */
             .menu-toggle:checked ~ header .main-nav {
                 display: block;
             }
@@ -168,184 +164,184 @@
         }
 
         /* ------Hero Section--------*/
-.hero-section {
-    padding: 60px 40px 0px 40px;
-    background: linear-gradient(#FFE7EB, #FFBFCA);
-}
-.content-wrapper {
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-}
-.sideA {
-    flex: 1;
-    padding-right: 40px;
-    max-width: 50%; 
-    margin-left: 40px;
-}
-
-h1 {
-  font-family: "Figtree", sans-serif;
-  font-weight: bold;
-  font-style: normal;
-  font-size: 3em;
-}
-
-.highlight-text {
-    color: #FA1239;
-    position: relative;
-    padding-bottom: 15px; 
-    display: inline-block;
-}
-.underline-svg-img {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    height: 40px;
-}
-
-
-.sideB {
-    flex: 1;    
-    position: relative;
-    max-width: 50%;
-}
-.sideB img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.primary-btn {
-    background-color: #ffffff;
-    color: #E0354C;
-    padding: 12px 15px;
-    border-radius: 30px;
-    text-decoration: none;
-    box-shadow: #fa123976 0px 0px 12px 0px;
-    border: 1px solid #FA1239;
-}
-.secondary-btn {
-    background-color: #FA1239;
-    color: #ffffff;
-    padding: 12px 15px;
-    border-radius: 30px;
-    text-decoration: none;
-    box-shadow: #fa123976 0px 0px 12px 0px;
-    border: 1px solid #FA1239;
-    margin-left: 20px;
-}
-h1 span {
-    color: #FA1239;
-}
-
-@media (max-width: 1024px) {
-    h1 {
-        font-size: 2em;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .content-wrapper {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .sideA,
-    .sideB {
-        max-width: 100%;
-        padding-right: 0;
-    }
-
-    .sideB {
-        order: -1;
-        margin-bottom: 30px;
-    }
-    .cta-buttons {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .rating-box {
-        left: 0%;
-        bottom: 33%;
-    }
-    .resumes-created-box {
-        right: -16%;
-        bottom: 7%;
-    }
-    h1 {
-        font-size: 2em;
-    }
-    p {
-        width: 100% !important;
-    }
-    .hero-section {
-    padding: 60px 40px 40px 40px;
-    }
-}
-
-/* --- Media Query for Small Phones--- */
-@media (max-width: 480px) {
-    .hero-section {
-        padding: 40px 20px;
-    }
-
-    .cta-buttons a {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .sideB {
-        max-height: 400px;
-        overflow: hidden;
-    }
-}
-
-.btn-wrapper {
-    text-align: center;
-}
-
-.btn-box {
-    padding: 10px 15px;
-    background-color: #fd92a451;
-    border: none;
-    margin: 50px 10px 10px 10px;
-    border-radius: 6px;
-}
-h2 {
-    font-family: "Figtree", sans-serif;
-    font-weight: bold;
-    font-style: normal;
-    width: 98%;
-}
-
-.box {
-    display: grid;
-    gap: 20px;
-    padding: 0px 40px;
-    margin: 50px 0px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-.box1 { 
-    padding: 10px;
-    background-color: white;
-    text-align: center;
-    border-radius: 20px;
-    box-shadow: #f0f0f0 0px 0px 10px 1px;
-}
-.vector-img {
-    width: 100%;
-}
-h3 {
-    font-family: "Figtree", sans-serif;
-    font-weight: bold;
-    font-style: normal;
-    text-align: left;
-}
-.box1 p {
-    text-align: left;
-}
-
+          .hero-section {
+              padding: 60px 40px 0px 40px;
+              background: linear-gradient(#FFE7EB, #FFBFCA);
+          }
+          .content-wrapper {
+              display: flex;
+              margin: 0 auto;
+              align-items: center;
+          }
+          .sideA {
+              flex: 1;
+              padding-right: 40px;
+              max-width: 50%; 
+              margin-left: 40px;
+          }
+          
+          h1 {
+            font-family: "Figtree", sans-serif;
+            font-weight: bold;
+            font-style: normal;
+            font-size: 3em;
+          }
+          
+          .highlight-text {
+              color: #FA1239;
+              position: relative;
+              padding-bottom: 15px; 
+              display: inline-block;
+          }
+          .underline-svg-img {
+              position: absolute;
+              width: 100%;
+              bottom: 0;
+              left: 0;
+              height: 40px;
+          }
+          
+          
+          .sideB {
+              flex: 1;    
+              position: relative;
+              max-width: 50%;
+          }
+          .sideB img {
+              max-width: 100%;
+              height: auto;
+              display: block;
+          }
+          
+          .primary-btn {
+              background-color: #ffffff;
+              color: #E0354C;
+              padding: 12px 15px;
+              border-radius: 30px;
+              text-decoration: none;
+              box-shadow: #fa123976 0px 0px 12px 0px;
+              border: 1px solid #FA1239;
+          }
+          .secondary-btn {
+              background-color: #FA1239;
+              color: #ffffff;
+              padding: 12px 15px;
+              border-radius: 30px;
+              text-decoration: none;
+              box-shadow: #fa123976 0px 0px 12px 0px;
+              border: 1px solid #FA1239;
+              margin-left: 20px;
+          }
+          h1 span {
+              color: #FA1239;
+          }
+          
+          @media (max-width: 1024px) {
+              h1 {
+                  font-size: 2em;
+              }
+          }
+          
+          
+          @media (max-width: 768px) {
+              .content-wrapper {
+                  flex-direction: column;
+                  text-align: center;
+              }
+          
+              .sideA,
+              .sideB {
+                  max-width: 100%;
+                  padding-right: 0;
+              }
+          
+              .sideB {
+                  order: -1;
+                  margin-bottom: 30px;
+              }
+              .cta-buttons {
+                  display: flex;
+                  justify-content: center;
+                  flex-wrap: wrap;
+              }
+              .rating-box {
+                  left: 0%;
+                  bottom: 33%;
+              }
+              .resumes-created-box {
+                  right: -16%;
+                  bottom: 7%;
+              }
+              h1 {
+                  font-size: 2em;
+              }
+              p {
+                  width: 100% !important;
+              }
+              .hero-section {
+              padding: 60px 40px 40px 40px;
+              }
+          }
+          
+          /* --- Media Query for Small Phones--- */
+          @media (max-width: 480px) {
+              .hero-section {
+                  padding: 40px 20px;
+              }
+          
+              .cta-buttons a {
+                  width: 100%;
+                  margin: 10px 0;
+              }
+          
+              .sideB {
+                  max-height: 400px;
+                  overflow: hidden;
+              }
+          }
+          
+          .btn-wrapper {
+              text-align: center;
+          }
+          
+          .btn-box {
+              padding: 10px 15px;
+              background-color: #fd92a451;
+              border: none;
+              margin: 50px 10px 10px 10px;
+              border-radius: 6px;
+          }
+          h2 {
+              font-family: "Figtree", sans-serif;
+              font-weight: bold;
+              font-style: normal;
+              width: 98%;
+          }
+          
+          .box {
+              display: grid;
+              gap: 20px;
+              padding: 0px 40px;
+              margin: 50px 0px;
+              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          }
+          .box1 { 
+              padding: 10px;
+              background-color: white;
+              text-align: center;
+              border-radius: 20px;
+              box-shadow: #f0f0f0 0px 0px 10px 1px;
+          }
+          .vector-img {
+              width: 100%;
+          }
+          h3 {
+              font-family: "Figtree", sans-serif;
+              font-weight: bold;
+              font-style: normal;
+              text-align: left;
+          }
+          .box1 p {
+              text-align: left;
+          }
+          
